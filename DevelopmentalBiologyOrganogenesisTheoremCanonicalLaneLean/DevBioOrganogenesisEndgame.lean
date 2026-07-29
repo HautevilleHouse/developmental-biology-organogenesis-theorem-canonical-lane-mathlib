@@ -1,0 +1,18 @@
+import canonicalLaneMathlib.AdmissibleClass
+import HautevilleHouse.DevelopmentalBiologyOrganogenesisTheoremCanonicalLaneLean.DevBioMorphogenGradient
+import HautevilleHouse.DevelopmentalBiologyOrganogenesisTheoremCanonicalLaneLean.DevBioGeneRegulatoryNetwork
+import HautevilleHouse.DevelopmentalBiologyOrganogenesisTheoremCanonicalLaneLean.DevBioCellDifferentiation
+import HautevilleHouse.DevelopmentalBiologyOrganogenesisTheoremCanonicalLaneLean.DevBioTissueMorphogenesis
+
+namespace HautevilleHouse
+namespace DevelopmentalBiologyOrganogenesisTheoremCanonicalLaneLean
+
+def ConstrainedOrganogenesisClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_organogenesis_endgame (A : AdmissibleClass) :
+    ConstrainedOrganogenesisClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end DevelopmentalBiologyOrganogenesisTheoremCanonicalLaneLean
+end HautevilleHouse
